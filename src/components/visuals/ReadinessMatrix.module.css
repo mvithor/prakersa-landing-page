@@ -1,0 +1,265 @@
+.panel {
+  padding: clamp(1rem, 0.85rem + 1vw, 1.5rem);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-paper);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: var(--text-base);
+  letter-spacing: -0.01em;
+}
+
+.note {
+  font-size: var(--text-xs);
+  color: var(--color-ink-500);
+}
+
+/* Bidang gambar beserta label sumbu */
+.plotArea {
+  display: grid;
+  grid-template-columns: 1.25rem 1fr;
+  grid-template-rows: 1fr auto;
+  gap: var(--space-2);
+}
+
+.axisY,
+.axisX {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-ink-500);
+  text-align: center;
+}
+
+.axisY {
+  grid-column: 1;
+  grid-row: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.axisX {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.plot {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  aspect-ratio: 1 / 0.82;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-paper);
+  overflow: hidden;
+}
+
+/* Empat kuadran. Ukurannya mengikuti posisi ambang. */
+.zone {
+  position: absolute;
+  transition: opacity var(--duration-base) ease;
+}
+
+.zoneDimmed {
+  opacity: 0.35;
+}
+
+.zone_siap {
+  background: color-mix(in srgb, var(--color-profile-siap) 10%, transparent);
+}
+
+.zone_behavior {
+  background: color-mix(in srgb, var(--color-profile-behavior) 11%, transparent);
+}
+
+.zone_kompetensi {
+  background: color-mix(in srgb, var(--color-profile-kompetensi) 10%, transparent);
+}
+
+.zone_ganda {
+  background: color-mix(in srgb, var(--color-profile-ganda) 9%, transparent);
+}
+
+.zoneLabel {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-ink-500);
+  white-space: nowrap;
+}
+
+.zone_siap .zoneLabel {
+  top: var(--space-2);
+  right: var(--space-2);
+}
+
+.zone_behavior .zoneLabel {
+  top: var(--space-2);
+  left: var(--space-2);
+}
+
+.zone_kompetensi .zoneLabel {
+  bottom: var(--space-2);
+  right: var(--space-2);
+}
+
+.zone_ganda .zoneLabel {
+  bottom: var(--space-2);
+  left: var(--space-2);
+}
+
+/* Garis ambang */
+.lineX,
+.lineY {
+  position: absolute;
+  pointer-events: none;
+}
+
+.lineX {
+  top: 0;
+  bottom: 0;
+  border-left: 1.5px dashed var(--color-primary-400);
+}
+
+.lineY {
+  left: 0;
+  right: 0;
+  border-bottom: 1.5px dashed var(--color-primary-400);
+}
+
+/* Titik siswa. Satu-satunya animasi otomatis di halaman ini:
+   titik menyebar dari tengah ke posisinya saat halaman dibuka. */
+.dot {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, 50%);
+  transition:
+    left var(--duration-slow) var(--ease-out),
+    bottom var(--duration-slow) var(--ease-out),
+    opacity var(--duration-base) ease;
+  transition-delay: calc(var(--dot-index) * 24ms), calc(var(--dot-index) * 24ms), 0ms;
+}
+
+.dotDimmed {
+  opacity: 0.18;
+}
+
+/* Pengatur ambang */
+.controls {
+  display: grid;
+  gap: var(--space-3) var(--space-6);
+  margin-top: var(--space-4);
+}
+
+.control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+}
+
+.controlLabel {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink-900);
+}
+
+.controlValue {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary-700);
+}
+
+.range {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 1.5rem;
+  margin: 0;
+  accent-color: var(--color-primary-500);
+  cursor: pointer;
+}
+
+/* Legenda sekaligus penghitung */
+.legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-paper);
+  text-align: left;
+  transition:
+    border-color var(--duration-fast) ease,
+    background-color var(--duration-fast) ease;
+}
+
+.legendItem:hover {
+  border-color: var(--color-primary-300);
+}
+
+.legendActive {
+  border-color: var(--color-primary-500);
+  background: var(--color-primary-50);
+}
+
+.legendName {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-ink-900);
+}
+
+.legendCount {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-900);
+}
+
+.detail {
+  min-height: 4rem;
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-ink-500);
+}
+
+@media (min-width: 30rem) {
+  .controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail {
+    min-height: 3.25rem;
+  }
+}

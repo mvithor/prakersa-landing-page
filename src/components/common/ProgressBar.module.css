@@ -1,0 +1,15 @@
+.track {
+  height: 0.5rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  min-width: 0.5rem;
+  border-radius: inherit;
+  background: var(--color-on-dark);
+  transition: width var(--duration-slow) var(--ease-out);
+}

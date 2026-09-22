@@ -1,0 +1,42 @@
+// Simulasi di hero. SELURUH data di bawah adalah data contoh, bukan data siswa sungguhan.
+export const matrixConfig = {
+  title: 'Simulasi satu kelas',
+  note: 'Data contoh, bukan data siswa sungguhan.',
+  instruction: 'Geser ambang untuk melihat profil berubah.',
+  axes: { x: 'Perilaku kerja', y: 'Kompetensi' },
+  domain: { min: 20, max: 100 },
+  thresholdRange: { min: 40, max: 85 },
+  defaultThreshold: { behavior: 60, competency: 65 },
+  sliders: {
+    behavior: 'Ambang perilaku',
+    competency: 'Ambang kompetensi',
+  },
+  emptyHint: 'Pilih salah satu profil untuk melihat artinya.',
+};
+
+export const sampleStudents = [
+  { id: 1, behavior: 82, competency: 88 },
+  { id: 2, behavior: 74, competency: 79 },
+  { id: 3, behavior: 91, competency: 72 },
+  { id: 4, behavior: 68, competency: 91 },
+  { id: 5, behavior: 77, competency: 68 },
+  { id: 6, behavior: 88, competency: 95 },
+  { id: 7, behavior: 63, competency: 74 },
+  { id: 8, behavior: 95, competency: 83 },
+  { id: 9, behavior: 71, competency: 85 },
+  { id: 10, behavior: 84, competency: 70 },
+  { id: 11, behavior: 42, competency: 81 },
+  { id: 12, behavior: 55, competency: 70 },
+  { id: 13, behavior: 35, competency: 92 },
+  { id: 14, behavior: 50, competency: 88 },
+  { id: 15, behavior: 58, competency: 67 },
+  { id: 16, behavior: 78, competency: 52 },
+  { id: 17, behavior: 66, competency: 60 },
+  { id: 18, behavior: 90, competency: 45 },
+  { id: 19, behavior: 72, competency: 38 },
+  { id: 20, behavior: 85, competency: 58 },
+  { id: 21, behavior: 38, competency: 44 },
+  { id: 22, behavior: 52, competency: 55 },
+  { id: 23, behavior: 30, competency: 33 },
+  { id: 24, behavior: 47, competency: 28 },
+];

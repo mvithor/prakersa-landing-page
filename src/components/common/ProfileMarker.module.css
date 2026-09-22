@@ -1,0 +1,37 @@
+.marker {
+  display: inline-block;
+  flex: none;
+  width: var(--marker-size);
+  height: var(--marker-size);
+  transition: background-color var(--duration-base) ease;
+}
+
+.neutral {
+  border-radius: 50%;
+  background: var(--color-ink-300);
+}
+
+/* Siap Penuh: lingkaran */
+.siap {
+  border-radius: 50%;
+  background: var(--color-profile-siap);
+}
+
+/* Risiko Behavior: segitiga */
+.behavior {
+  background: var(--color-profile-behavior);
+  clip-path: polygon(50% 4%, 100% 96%, 0 96%);
+}
+
+/* Risiko Kompetensi: persegi */
+.kompetensi {
+  border-radius: 2px;
+  background: var(--color-profile-kompetensi);
+  transform: scale(0.9);
+}
+
+/* Risiko Ganda: belah ketupat */
+.ganda {
+  background: var(--color-profile-ganda);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}

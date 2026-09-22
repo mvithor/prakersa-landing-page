@@ -1,0 +1,47 @@
+.section {
+  padding-block: var(--space-section);
+}
+
+.compact {
+  padding-block: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+}
+
+.hero {
+  padding-block: clamp(2.5rem, 1.5rem + 4vw, 5.5rem) clamp(3rem, 2rem + 4vw, 6rem);
+}
+
+.paper {
+  background: var(--color-paper);
+}
+
+.mist {
+  background: var(--color-mist);
+}
+
+.ink {
+  background: var(--color-ink-900);
+  color: var(--color-on-dark-muted);
+}
+
+.primary {
+  background: var(--color-primary-600);
+  color: var(--color-primary-100);
+}
+
+.ink h1,
+.ink h2,
+.ink h3,
+.ink h4,
+.ink strong,
+.primary h1,
+.primary h2,
+.primary h3,
+.primary h4,
+.primary strong {
+  color: var(--color-on-dark);
+}
+
+.ink :focus-visible,
+.primary :focus-visible {
+  outline-color: var(--color-on-dark);
+}

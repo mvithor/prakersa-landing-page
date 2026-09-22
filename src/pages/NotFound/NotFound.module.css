@@ -1,0 +1,15 @@
+.title {
+  font-size: var(--text-h2);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  margin-top: var(--space-5);
+  font-size: var(--text-lead);
+  max-width: 50ch;
+}
+
+.action {
+  margin-top: var(--space-8);
+}

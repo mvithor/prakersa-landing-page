@@ -1,0 +1,186 @@
+.panel {
+  position: relative;
+  width: 100%;
+  max-width: 54rem;
+  margin-inline: auto;
+  padding: var(--space-7, 1.75rem) var(--space-7, 1.75rem) var(--space-6);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, #0b1f1a 0%, #0a1512 100%);
+  color: #e8f5ee;
+  box-shadow: 0 24px 48px -20px rgba(6, 20, 16, 0.55);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9fc9b8;
+}
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.liveDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6ee7a8;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.diagram {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.node {
+  fill: rgba(255, 255, 255, 0.045);
+  stroke-width: 1.5;
+}
+
+.nodeLive { stroke: #6ee7a8; }
+.nodeBuilding { stroke: #f2c14e; }
+.nodeVision { stroke: #7d8ea3; stroke-dasharray: 4 3; }
+
+.statusDot {
+  fill: currentColor;
+  filter: drop-shadow(0 0 3px currentColor);
+}
+
+.dotLive { color: #6ee7a8; }
+.dotBuilding { color: #f2c14e; }
+.dotVision { color: #7d8ea3; }
+
+.nodeCode {
+  font-size: 13px;
+  font-weight: 600;
+  fill: #9fc9b8;
+  letter-spacing: 0.08em;
+}
+
+.nodeTitle {
+  font-size: 23px;
+  font-weight: 700;
+  fill: #f4fbf7;
+}
+
+.nodeSubtitle {
+  font-size: 14.5px;
+  fill: #a9c4b8;
+}
+
+.forwardPath {
+  stroke: rgba(110, 231, 168, 0.6);
+  stroke-width: 2;
+}
+
+.feedbackPath {
+  stroke: rgba(242, 193, 78, 0.45);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.feedbackLabelBg {
+  fill: #0d1a16;
+}
+
+.feedbackLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  fill: #f2c14e;
+}
+
+.particle {
+  fill: #6ee7a8;
+}
+
+.particleA {
+  offset-path: path('M190,80 L231,80');
+  animation: flowParticle 1.4s linear infinite;
+}
+
+.particleB {
+  offset-path: path('M405,80 L446,80');
+  animation: flowParticle 1.4s linear infinite;
+  animation-delay: 0.7s;
+}
+
+.particleFeedback {
+  fill: #f2c14e;
+  offset-path: path('M535,130 C 565,238 75,238 105,130');
+  animation: flowParticle 4.4s linear infinite;
+  animation-delay: 0.6s;
+}
+
+@keyframes flowParticle {
+  0% { offset-distance: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-6);
+  font-size: 0.85rem;
+  color: #cfe6db;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-live { background: #6ee7a8; }
+.dot-building { background: #f2c14e; }
+.dot-vision { background: #7d8ea3; }
+
+.legendSep {
+  margin-left: 6px;
+  color: rgba(207, 230, 219, 0.35);
+}
+
+.ticker {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 1.4em;
+  font-size: 0.95rem;
+  color: #e8f5ee;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liveDot, .particleA, .particleB, .particleFeedback { animation: none; }
+  .particle { opacity: 0; }
+}

@@ -1,0 +1,19 @@
+.skip {
+  position: absolute;
+  left: var(--space-4);
+  top: var(--space-4);
+  z-index: calc(var(--z-header) + 10);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+  background: var(--color-ink-900);
+  color: var(--color-on-dark);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip:focus-visible {
+  transform: translateY(0);
+}

@@ -1,0 +1,13 @@
+.heading {
+  max-width: 44rem;
+}
+
+.title {
+  max-width: 22ch;
+}
+
+.lead {
+  margin-top: var(--space-5);
+  font-size: var(--text-lead);
+  max-width: var(--measure);
+}
