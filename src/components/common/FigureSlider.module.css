@@ -1,5 +1,6 @@
 .slider {
   position: relative;
+  min-width: 0;
 }
 
 .track {
@@ -18,6 +19,7 @@
 
 .slide {
   flex: 0 0 100%;
+  min-width: 0;
   scroll-snap-align: start;
   aspect-ratio: 4 / 3;
 }

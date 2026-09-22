@@ -76,6 +76,9 @@ strong {
   display: flex;
   flex-direction: column;
 }
+html {
+  overflow-x: hidden;
+}
 
 /* Hormati preferensi pengguna yang mengurangi animasi */
 @media (prefers-reduced-motion: reduce) {

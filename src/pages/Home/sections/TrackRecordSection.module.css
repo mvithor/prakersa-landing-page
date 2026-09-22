@@ -8,6 +8,11 @@
   display: grid;
   gap: var(--space-8);
   align-items: center;
+  min-width: 0;
+}
+
+.body {
+  min-width: 0;
 }
 
 .kind {
@@ -34,6 +39,7 @@
 .fact {
   display: flex;
   flex-direction: column-reverse;
+  min-width: 0;
 }
 
 .factValue {
