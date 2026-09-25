@@ -382,9 +382,36 @@ button.stage {
   margin-bottom: var(--space-4, 1rem);
 }
 
+.mitraGrid {
+  display: grid;
+  gap: var(--space-3, 0.75rem);
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.mitraCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  height: auto;
+  padding: var(--space-4, 1rem);
+  text-align: left;
+  white-space: normal;
+}
+
+.mitraCard strong {
+  font-family: var(--font-display, inherit);
+}
+
+@media (min-width: 48rem) {
+  .mitraGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .groups {
   display: grid;
-  gap: var(--space-4, 1rem);
+  gap: var(--space-6, 1.5rem);
 }
 
 .group {
@@ -412,7 +439,7 @@ button.stage {
   display: flex;
   align-items: center;
   gap: var(--space-2, 0.5rem);
-  margin-bottom: var(--space-2, 0.5rem);
+  margin-bottom: var(--space-3, 0.75rem);
   font-weight: 600;
 }
 
@@ -1165,12 +1192,13 @@ button.stage {
 .kesiapanGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3, 0.75rem);
-  margin-bottom: var(--space-5, 1.25rem);
+  gap: var(--space-4, 1rem);
+  margin-top: var(--space-5, 1.25rem);
+  margin-bottom: var(--space-6, 1.5rem);
 }
 
 .kesiapanBox {
-  padding: var(--space-4, 1rem);
+  padding: var(--space-5, 1.25rem);
   border-radius: var(--demo-radius);
 }
 
@@ -1200,15 +1228,20 @@ button.stage {
 .counts {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-2, 0.5rem);
-  margin-top: var(--space-4, 1rem);
+  gap: var(--space-3, 0.75rem);
+  margin-top: var(--space-5, 1.25rem);
 }
 
+/* Catatan: kalau file Anda sebelumnya punya DUA blok .count, satu dengan
+   padding lama (var(--space-2, 0.5rem) var(--space-3, 0.75rem)) persis di
+   bawah yang baru, itu bug. Spesifisitasnya sama, jadi blok yang lebih bawah
+   menang di CSS, padding lama diam-diam menimpa padding baru di SEMUA ukuran
+   layar, bukan cuma mobile. Cuma satu blok yang boleh ada, ini yang aktif. */
 .count {
   display: flex;
   align-items: center;
   gap: var(--space-2, 0.5rem);
-  padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
   border: 1px solid var(--demo-line);
   border-left: 3px solid var(--demo-line);
   border-radius: var(--demo-radius-sm);
@@ -1395,34 +1428,6 @@ button.stage {
   }
 }
 
-.mitraGrid {
-  display: grid;
-  gap: var(--space-3, 0.75rem);
-  margin-bottom: var(--space-2, 0.5rem);
-}
-
-.mitraCard {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.3rem;
-  height: auto;
-  padding: var(--space-4, 1rem);
-  text-align: left;
-  white-space: normal;
-}
-
-.mitraCard strong {
-  font-family: var(--font-display, inherit);
-}
-
-@media (min-width: 48rem) {
-  .mitraGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-
 @media (max-width: 30rem) {
   .breakRow {
     grid-template-columns: 6.5rem 1fr 2.2rem;
@@ -1439,5 +1444,15 @@ button.stage {
   .rankScore {
     grid-column: 2;
     text-align: left;
+  }
+
+  /* Di layar sempit, dua kolom sempit memaksa label seperti "Risiko behavior"
+     pecah jadi dua baris, kartunya jadi tinggi, dan gap di antaranya jadi
+     kelihatan tidak berarti dibanding tingginya kartu. Satu kolom penuh lebih
+     lega dibaca, dan gap vertikalnya dinaikkan supaya tetap jelas terlihat
+     sebagai batas antar kartu, bukan cuma numpang tinggi kartu itu sendiri. */
+  .counts {
+    grid-template-columns: 1fr;
+    gap: var(--space-3, 0.75rem);
   }
 }

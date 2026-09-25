@@ -1,3 +1,6 @@
+import bukti1Img from '@/assets/bukti1.jpg';
+import bukti2Img from '@/assets/bukti2.jpg';
+import bukti3Img from '@/assets/bukti3.jpg';
 import mouGowataImg from '@/assets/mougowata.jpeg';
 import mouSungguminasaImg from '@/assets/mousungguminasa.jpeg';
 import riset1Img from '@/assets/riset1.jpeg';
@@ -14,21 +17,21 @@ export const trackRecord = {
       kind: 'Platform · Berjalan',
       name: 'Abseninaja di 3 SMK Sulawesi Selatan',
       description:
-        'Tiga SMK menjalankan Abseninaja penuh sejak Mei-Agustus 2026. SGA dibangun sebagai modul tambahan di atas platform yang sudah berjalan ini, bukan produk baru dari nol.',
+        'Tiga SMK menjalankan Abseninaja penuh sejak Mei-Agustus 2026. Prakersa dibangun sebagai modul tambahan di atas platform yang sudah berjalan ini, bukan produk baru dari nol.',
       facts: [
         { label: 'Sejak', value: 'Mei-Agustus 2026' },
         { label: 'Sekolah', value: '3 SMK' },
         { label: 'Wilayah', value: 'Sulawesi Selatan' },
       ],
       figures: [
-        { label: 'Tangkapan layar dashboard sekolah' },
-        { label: 'Tangkapan layar input guru' },
-        { label: 'Dokumentasi penggunaan di sekolah' },
+        { src: bukti1Img, alt: 'Tangkapan layar dashboard sekolah' },
+        { src: bukti2Img, alt: 'Tangkapan layar input guru' },
+        { src: bukti3Img, alt: 'Dokumentasi penggunaan di sekolah' },
       ],
     },
     {
       key: 'sga-capstone-commitment',
-      kind: 'Komitmen SGA · Business Matching',
+      kind: 'Komitmen Prakersa · Business Matching',
       name: 'SMK Hasanuddin & SMK Handayani',
       description:
         'Satu SMK Hasanuddin Makassar dan dua SMK Handayani tercatat di tahap Commitment/Implementation pada business matching capstone PIDI Digdaya.',
@@ -71,7 +74,7 @@ export const trackRecord = {
         { label: 'Sumber', value: 'Saungberita.com' },
         { label: 'Terbit', value: '22 Agustus 2026' },
       ],
-      note: 'Ini liputan soal platform Abseninaja di jenjang MTs, bukan bukti pasar SGA di SMK.',
+      note: 'Ini liputan soal platform Abseninaja di jenjang MTs, bukan bukti pasar Prakersa di SMK.',
       figures: [],
       externalLink: {
         label: 'Baca liputan di Saungberita.com',
@@ -84,9 +87,9 @@ export const trackRecord = {
     {
       key: 'not-yet',
       kind: 'Belum Ada',
-      name: 'Data hasil siswa SGA',
+      name: 'Data hasil siswa Prakersa',
       description:
-        'Belum ada data penggunaan dan hasil penempatan siswa lewat SGA. Siklus PKL pertama, dimulai dari pilot SMK Al-Huda, akan menghasilkannya.',
+        'Belum ada data penggunaan dan hasil penempatan siswa lewat Prakersa. Siklus PKL pertama, dimulai dari pilot SMK Al-Huda, akan menghasilkannya.',
       facts: [],
       figures: [],
       statusFigure: true,

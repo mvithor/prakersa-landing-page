@@ -64,7 +64,7 @@ export function useDemoForm() {
     setStatus('submitting');
     try {
       const finalValues = { ...values, whatsapp: normalizePhone(values.whatsapp) };
-      const message = buildWhatsAppMessage(demoFields, finalValues, 'Permintaan demo SGA baru');
+      const message = buildWhatsAppMessage(demoFields, finalValues, 'Permintaan demo Prakersa baru');
       const url = buildWhatsAppUrl(demoPage.whatsappNumber, message);
       openWhatsApp(url);
       setStatus('success');
