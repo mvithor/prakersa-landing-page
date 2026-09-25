@@ -29,7 +29,7 @@ export const privacyPage = {
       body: [
         // Pasal 1 angka 4: Pengendali Data Pribadi adalah pihak yang menentukan
         // tujuan dan melakukan kendali pemrosesan Data Pribadi.
-        `${NAMA_BADAN_HUKUM}, beralamat di ${ALAMAT_BADAN_HUKUM}, adalah Prosesor Data Pribadi yang menyediakan dan mengoperasikan sistem Prakersa/Skill Gap Advisor (SGA) atas instruksi sekolah.`,
+        `${NAMA_BADAN_HUKUM}, beralamat di ${ALAMAT_BADAN_HUKUM}, adalah Prosesor Data Pribadi yang menyediakan dan mengoperasikan sistem Prakersa atas instruksi sekolah.`,
         // Relasi sekolah-platform ini asumsi kerja (pola paling umum dipakai
         // penyedia sistem informasi sekolah), bukan kesimpulan hukum final.
         // Statusnya dilacak di belumDiisi, bukan dihedge kalimat per kalimat.

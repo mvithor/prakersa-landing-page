@@ -18,7 +18,7 @@ export const rolePages = {
       note: undefined,
     },
 
-    title: 'Penempatan PKL yang bisa Anda pertanggungjawabkan.',
+    title: 'Penempatan PKL yang bisa di pertanggungjawabkan.',
     lead: 'Untuk Kepala Sekolah, Kepala Jurusan, dan guru produktif yang ingin keputusan penempatan berdiri di atas data dua tahun, bukan kesan beberapa minggu terakhir.',
 
     // Diringkas dari differentiators.js, bukan klaim baru, supaya hero langsung
@@ -46,7 +46,7 @@ export const rolePages = {
       'Masalah di tempat PKL baru diketahui setelah industri mengeluh atau siswa dipulangkan.',
       'Pemetaan SKKNI dibuat bersama ahli, lalu tidak pernah masuk ke penilaian harian.',
     ],
-    gainsTitle: 'Yang berubah dengan SGA',
+    gainsTitle: 'Yang berubah dengan Prakersa',
     gains: [
       {
         title: 'Profil per siswa sejak kelas sepuluh',

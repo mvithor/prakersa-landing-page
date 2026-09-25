@@ -14,6 +14,6 @@ export const pilot = {
     'Industri mitra sekolah ikut serta tanpa biaya.',
   ],
   requirement:
-    'Syarat: sekolah memakai atau bersedia memakai Abseninaja, karena data perilaku SGA bersumber dari sana.',
+    'Syarat: sekolah memakai atau bersedia memakai Abseninaja, karena data perilaku bersumber dari sana.',
   cta: { label: 'Ajukan demo sekolah', to: PATHS.demo },
 };

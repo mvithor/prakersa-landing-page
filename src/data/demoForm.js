@@ -18,7 +18,7 @@ export const demoPage = {
   errorText:
     'WhatsApp tidak bisa dibuka otomatis. Periksa apakah browser Anda memblokir jendela pop-up, lalu coba lagi.',
   consentLabel:
-    'Saya setuju data di formulir ini dipakai untuk menghubungi saya terkait demo SGA.',
+    'Saya setuju data di formulir ini dipakai untuk menghubungi saya terkait demo Prakersa.',
   consentError: 'Centang persetujuan agar kami boleh menghubungi Anda.',
   privacyLink: { label: 'Kebijakan privasi', to: PATHS.privacy },
   // TODO Vithor: ganti dengan nomor WhatsApp tujuan. Format kode negara,

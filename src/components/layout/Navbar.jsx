@@ -56,7 +56,7 @@ export default function Navbar() {
     <header className={cn(styles.header, scrolled && styles.scrolled)}>
       <Container className={styles.inner}>
         <Link to={PATHS.home} className={styles.brand} aria-label="Skill Gap Advisor, ke beranda">
-          <Logo />
+          <Logo showWordmark={false} />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Navigasi utama">

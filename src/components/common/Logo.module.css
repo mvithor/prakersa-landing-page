@@ -6,22 +6,10 @@
 }
 
 .mark {
-  width: 2rem;
   height: 2rem;
+  width: auto;
   flex: none;
-}
-
-.markBg {
-  fill: var(--color-primary-500);
-}
-
-.cell {
-  fill: #ffffff;
-}
-
-.cellDim {
-  fill: #ffffff;
-  fill-opacity: 0.38;
+  object-fit: contain;
 }
 
 .wordmark {
